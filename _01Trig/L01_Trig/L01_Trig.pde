@@ -1,6 +1,6 @@
 int frame = 0;
 float multiplier = 0.302;
-int numberOfPoints = 300;
+int numberOfPoints = 100;
 int distance = 30;
 
 void setup()
@@ -21,12 +21,13 @@ void draw()
 	{
 		point (distance + i, 240 + sin ((frame + i) * -0.01) * 100);	
 	}
-}
 
-void stroke ();
-for (int i = 0; i < width; i += distance)
-{
+	stroke (127, 69, 249);
+	for (int i = 0; i < width; i += distance)
+	{
 	point (distance + i, 246 + sin ((frame + i) * 0.01) * 130);
-}
+	}
+
 frame++;
+
 }
