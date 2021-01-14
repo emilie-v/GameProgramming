@@ -1,31 +1,32 @@
-int frame;
+int frame = 0;
 float multiplier = 0.302;
-int numberOfPoints;
+int numberOfPoints = 300;
+int distance = 30;
 
 void setup()
 {
 	size (640, 480);
 	strokeWeight(6);
-	stroke(255, 110, 199);
-	clearBackground();
+	
 	numberOfPoints = 0;
 	frame++;
 }
 
-void clearBackground()
+void draw()
 {
 	background(0);
-}
+	stroke(255, 110, 199);
 
-void sineCurve()
-{
-	for (int i = 0; i < numberOfPoints; i++) 
+	for (int i = 0; i < width; i += distance)
 	{
-		ponts(i * 5, height / 2 + sin ((frame * 0.05) + (i + 0.15)) + 200);	
+		point (distance + i, 240 + sin ((frame + i) * -0.01) * 100);	
 	}
 }
 
-void cosCurve()
+void stroke ();
+for (int i = 0; i < width; i += distance)
 {
-	
+	point (distance + i, 246 + sin ((frame + i) * 0.01) * 130);
+}
+frame++;
 }

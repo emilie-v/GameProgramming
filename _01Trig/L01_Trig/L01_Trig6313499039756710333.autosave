@@ -21,11 +21,11 @@ void sineCurve()
 {
 	for (int i = 0; i < numberOfPoints; i++) 
 	{
-		ponts(i * 5, height / 2 + sin ((frame * 0.05) + (i + 0.15)) + 200);	
+		points(i * 5, height / 2 + sin ((frame * 0.05) + (i + 0.15)) + 200);	
 	}
 }
 
 void cosCurve()
 {
-	
+
 }
