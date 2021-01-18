@@ -15,6 +15,8 @@ void setup()
 void draw()
 {
 	background(0);
+	cosCurve();
+	circleCurve();
 	stroke(255, 110, 199);
 
 	for (int i = 0; i < width; i += distance)
@@ -29,5 +31,37 @@ void draw()
 	}
 
 frame++;
+}
 
+void cosCurve()
+{
+	stroke (125, 249, 255);
+	scale (1,1);
+
+	translate(width, height);
+	rotate(PI/1);
+	for (int i = 0; i < numberOfPoints; i++) 
+	{
+		point (i * 10, height / 2 + cos (frame * 0.026));
+	}
+}
+
+
+void circleCurve()
+{
+	float centerX = width / 2;
+	float centerY = height / 2;
+	float radius = 150;
+	float angle = 0;
+	float slice = PI * 2 / numberOfPoints;
+
+	translate(width / 2, height / 2);
+
+for (int i = 0; i < numberOfPoints; i++)
+	{
+		angle = i * slice;
+		centerX = cos(angle) * radius;
+		centerY = sin(angle) * radius;
+		point (centerX, centerY);	
+	}
 }
