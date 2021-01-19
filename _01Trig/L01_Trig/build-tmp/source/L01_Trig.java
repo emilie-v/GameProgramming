@@ -15,9 +15,11 @@ import java.io.IOException;
 public class L01_Trig extends PApplet {
 
 int frame = 0;
-float multiplier = 0.302f;
+float speed = 0.01f;
 int numberOfPoints = 100;
 int distance = 30;
+int curvePos = 240;
+int curveHeight = 120;
 
 public void setup()
 {
@@ -31,55 +33,20 @@ public void setup()
 public void draw()
 {
 	background(0);
-	cosCurve();
-	circleCurve();
 	stroke(255, 110, 199);
 
 	for (int i = 0; i < width; i += distance)
 	{
-		point (distance + i, 240 + sin ((frame + i) * -0.01f) * 100);	
+		point (distance + i, curvePos + sin ((frame + i) * speed) * curveHeight);	
 	}
 
 	stroke (127, 69, 249);
 	for (int i = 0; i < width; i += distance)
 	{
-	point (distance + i, 246 + sin ((frame + i) * 0.01f) * 130);
+	point (distance + i, curvePos + cos ((frame + i) * speed + PI / 2) * curveHeight);
 	}
 
 frame++;
-}
-
-public void cosCurve()
-{
-	stroke (125, 249, 255);
-	scale (1,1);
-
-	translate(width, height);
-	rotate(PI/1);
-	for (int i = 0; i < numberOfPoints; i++) 
-	{
-		point (i * 10, height / 2 + cos (frame * 0.026f));
-	}
-}
-
-
-public void circleCurve()
-{
-	float centerX = width / 2;
-	float centerY = height / 2;
-	float radius = 150;
-	float angle = 0;
-	float slice = PI * 2 / numberOfPoints;
-
-	translate(width / 2, height / 2);
-
-for (int i = 0; i < numberOfPoints; i++)
-	{
-		angle = i * slice;
-		centerX = cos(angle) * radius;
-		centerY = sin(angle) * radius;
-		point (centerX, centerY);	
-	}
 }
   public void settings() { 	size (640, 480); }
   static public void main(String[] passedArgs) {
