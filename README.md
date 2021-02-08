@@ -16,5 +16,16 @@ finished
 wip
 
 ## Lesson 06 - Saving with JSON
+wip
 
 ## Lesson 07 - Scriptable Objects
+
+
+## Lesson 08 - Procedural Generation
+
+
+## Lesson 09 - Programming Patterns Part 2
+
+
+## Lesson 10 - Firebase
+wip
