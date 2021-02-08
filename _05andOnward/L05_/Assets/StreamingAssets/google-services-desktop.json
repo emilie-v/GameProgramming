@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "325207531713",
+    "firebase_url": "https://cardungeonhideandseek-f9455-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "cardungeonhideandseek-f9455",
+    "storage_bucket": "cardungeonhideandseek-f9455.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:325207531713:android:434d0c97e349f6cd9bb440",
+        "android_client_info": {
+          "package_name": "com.Yrgo.SaveData"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "325207531713-hip2dtqef6gpcc87aqone78imgbovgkq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCUb3zAGGfYh6OAMfGLR1bWjr32BztB-7I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "325207531713-hip2dtqef6gpcc87aqone78imgbovgkq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
