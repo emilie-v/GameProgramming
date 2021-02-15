@@ -7,7 +7,7 @@ finished
 finished
 
 ## Lesson 03 - Programming Patterns Part 1
-wip - still watching
+finished
 
 ## Lesson 04 - I am Error
 finished
@@ -29,3 +29,8 @@ wip
 
 ## Lesson 10 - Firebase
 wip
+
+## Lesson 11 - Event Systems
+
+## Lesson 13 - Build to Mobile
+finished
