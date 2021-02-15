@@ -13,22 +13,22 @@ finished
 finished
 
 ## Lesson 05 - Saving Data
-wip
+finished
 
 ## Lesson 06 - Saving with JSON
-wip
+finished
 
 ## Lesson 07 - Scriptable Objects
 
 
 ## Lesson 08 - Procedural Generation
-
+finished
 
 ## Lesson 09 - Programming Patterns Part 2
 
 
 ## Lesson 10 - Firebase
-wip
+finished
 
 ## Lesson 11 - Event Systems
 
