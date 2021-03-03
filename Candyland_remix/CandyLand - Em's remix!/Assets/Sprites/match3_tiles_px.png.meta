@@ -1,0 +1,526 @@
+fileFormatVersion: 2
+guid: a7533d873155d80429b3dab2a0104e88
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6742961673591888044
+    second: match3_tiles_px_0
+  - first:
+      213: 6053598454090066378
+    second: match3_tiles_px_1
+  - first:
+      213: -2049670132876014994
+    second: match3_tiles_px_2
+  - first:
+      213: 628018758021493828
+    second: match3_tiles_px_3
+  - first:
+      213: -7996653930015685497
+    second: match3_tiles_px_4
+  - first:
+      213: -72523141821166470
+    second: match3_tiles_px_5
+  - first:
+      213: -1635530187313710942
+    second: match3_tiles_px_6
+  - first:
+      213: -1097309262411890861
+    second: match3_tiles_px_7
+  - first:
+      213: 1754296656275507056
+    second: match3_tiles_px_8
+  - first:
+      213: 3036726918330420748
+    second: match3_tiles_px_9
+  - first:
+      213: -5772498962460379737
+    second: match3_tiles_px_10
+  - first:
+      213: -112651663613461683
+    second: match3_tiles_px_11
+  - first:
+      213: -115851312756779128
+    second: match3_tiles_px_12
+  - first:
+      213: 8313545551626324998
+    second: match3_tiles_px_13
+  - first:
+      213: -3791115992480001296
+    second: match3_tiles_px_14
+  - first:
+      213: 8830867882130904705
+    second: match3_tiles_px_15
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 40
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: match3_tiles_px_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 39.5
+        width: 40
+        height: 39.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca894889aefc39d50800000000000000
+      internalID: 6742961673591888044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: match3_tiles_px_1
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 39.5
+        width: 40
+        height: 39.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac964ec78b3b20450800000000000000
+      internalID: 6053598454090066378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: match3_tiles_px_2
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 39.5
+        width: 40
+        height: 39.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6a823fafdb1e83e0800000000000000
+      internalID: -2049670132876014994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: match3_tiles_px_3
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 39.5
+        width: 40
+        height: 39.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4443728abbb27b800800000000000000
+      internalID: 628018758021493828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: match3_tiles_px_4
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 39.5
+        width: 40
+        height: 39.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7840fa56e9d260190800000000000000
+      internalID: -7996653930015685497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: match3_tiles_px_5
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 39.5
+        width: 40
+        height: 39.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7c01c536985efef0800000000000000
+      internalID: -72523141821166470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: match3_tiles_px_6
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 39.5
+        width: 40
+        height: 39.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a8fcb5c5fd6d49e0800000000000000
+      internalID: -1635530187313710942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: match3_tiles_px_7
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 39.5
+        width: 40
+        height: 39.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35f71352a0395c0f0800000000000000
+      internalID: -1097309262411890861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: match3_tiles_px_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0.5
+        width: 40
+        height: 39.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07705f3a383885810800000000000000
+      internalID: 1754296656275507056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: match3_tiles_px_9
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 0.5
+        width: 40
+        height: 39.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0e83fefa0f942a20800000000000000
+      internalID: 3036726918330420748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: match3_tiles_px_10
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 0.5
+        width: 40
+        height: 39.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a5fc3417c6f3efa0800000000000000
+      internalID: -5772498962460379737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: match3_tiles_px_11
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 0.5
+        width: 40
+        height: 39.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4b76f6a8e7cf6ef0800000000000000
+      internalID: -112651663613461683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: match3_tiles_px_12
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 0.5
+        width: 40
+        height: 39.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8879e5848d9646ef0800000000000000
+      internalID: -115851312756779128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: match3_tiles_px_13
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 0.5
+        width: 40
+        height: 39.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60c47b4d1a5af5370800000000000000
+      internalID: 8313545551626324998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: match3_tiles_px_14
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 0.5
+        width: 40
+        height: 39.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f25ded4710436bc0800000000000000
+      internalID: -3791115992480001296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: match3_tiles_px_15
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 0.5
+        width: 40
+        height: 39.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18691d40d8b8d8a70800000000000000
+      internalID: 8830867882130904705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 2c68e534743c27a4992125087108f9e8
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
