@@ -86,40 +86,37 @@ public class GameManager : MonoBehaviour
     {
         List<Node> path = new List<Node>();
 
-
         Type targetType = Type.red;
-        int random = Random.Range(0, 6);
+        int random = Random.Range(0, 60);
 
-        switch (random)
+        if (random >= 50)
         {
-            case 0:
-                targetType = Type.red;
-                break;
+            targetType = Type.purple;
+        }
 
-            case 1:
-                targetType = Type.yellow;
-                break;
+        else if (random >= 40)
+        {
+            targetType = Type.blue;
+        }
 
-            case 2:
-                targetType = Type.green;
-                break;
+        else if (random >= 30)
+        {
+            targetType = Type.pink;
+        }
 
-            case 3:
-                targetType = Type.pink;
-                break;
+        else if (random >= 20)
+        {
+            targetType = Type.green;
+        }
 
-            case 4:
-                targetType = Type.blue;
-                break;
+        else if (random >= 10)
+        {
+            targetType = Type.yellow;
+        }
 
-            case 5:
-                targetType = Type.purple;
-                break;
-
-
-            default:
-                Debug.LogError("outside of die range");
-                break;
+        else
+        {
+            targetType = Type.red;
         }
 
         Debug.Log(targetType);
