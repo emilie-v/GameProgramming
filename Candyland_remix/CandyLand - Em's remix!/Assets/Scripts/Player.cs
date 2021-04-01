@@ -8,11 +8,11 @@ public class Player : MonoBehaviour
 	[SerializeField] float waitTime = 0.5f;
 	int currentTile = 0;
 
-	GameManager gameManager;
+	Game gameManager;
 
     private void Start()
     {
-		gameManager = FindObjectOfType<GameManager>();
+		gameManager = FindObjectOfType<Game>();
     }
 
     public int CurrentTile

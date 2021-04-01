@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "584647202284",
+    "firebase_url": "https://candyland-194c8-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "candyland-194c8",
+    "storage_bucket": "candyland-194c8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:584647202284:android:19c956998c5d896f995cc9",
+        "android_client_info": {
+          "package_name": "com.Yrgo.Candyland"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "584647202284-e1has897jn64gkadj6eirkf5r0o3h0vh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCubiHmmS1GefUam-f2aG_vCJBbAu7jWZc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "584647202284-e1has897jn64gkadj6eirkf5r0o3h0vh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,156 +1,141 @@
-﻿using System.Collections.Generic;
+﻿using Firebase.Auth;
+using Firebase.Database;
 using UnityEngine;
-using UnityEngine.UI;
+using TMPro;
 
 public class GameManager : MonoBehaviour
 {
-    [Header("Node List")]
-    [SerializeField] List<Node> nodes = new List<Node>();
-    [Header("Player Stuff")]
-    [SerializeField] List<Player> players = new List<Player>();
-    [SerializeField] Button diceButton;
+    //public TextMeshProUGUI status;  //So we can tell the user whats going on
+    UserInfo user;                  //ref to our user
+    string userID;                  //ref to userID for easy access
+    FirebaseManager fbManager;      //ref to FirebaseManager Instance for easy access
 
-    int playerIndex = 0;
-
-    Player currentPlayer;
-
+    // Start is called before the first frame update
     void Start()
     {
-        currentPlayer = players[0];
+        //Ref for our userID
+        userID = FirebaseAuth.DefaultInstance.CurrentUser.UserId;
 
-        foreach (var player in players)
-        {
-            player.transform.position = nodes[0].transform.position;
-        }
+        //Create ref for our firebase Instance
+        fbManager = FirebaseManager.Instance;
 
-        SetNodeTypes();
+        //Tell the user what's happening
+        Log("Loading data for: " + userID);
+
+        //Load userInfo
+        StartCoroutine(fbManager.LoadData("users/" + userID, LoadedUser));
     }
 
-    private void SetNodeTypes()
+    //prints info to the console and the user
+    private void Log(string message)
     {
-        int index = 0;
-
-        for (int i = 0; i < nodes.Count; i++)
-        {
-
-            if (index > 6)
-            {
-                index = 1;
-            }
-
-            if (i == 0)
-            {
-                nodes[i].Type = Type.start;
-            }
-
-            else if (i == nodes.Count - 1)
-            {
-                nodes[i].Type = Type.finish;
-            }
-
-            else if (index % 6 == 0)
-            {
-                nodes[i].Type = Type.purple;
-            }
-
-            else if (index % 5 == 0)
-            {
-                nodes[i].Type = Type.blue;
-            }
-
-            else if (index % 4 == 0)
-            {
-                nodes[i].Type = Type.pink;
-            }
-
-            else if (index % 3 == 0)
-            {
-                nodes[i].Type = Type.green;
-            }
-
-            else if (index % 2 == 0)
-            {
-                nodes[i].Type = Type.yellow;
-            }
-
-            else if (index % 1 == 0)
-            {
-                nodes[i].Type = Type.red;
-            }
-
-            index++;
-        }
+        //status.text = message;
+        Debug.Log(message);
     }
 
-    public void RollDice()
+    //process the user data
+    private void LoadedUser(string jsonData)
     {
-        List<Node> path = new List<Node>();
+        Log("Processing user data: " + userID);
 
-        Type targetType = Type.red;
-        int random = Random.Range(0, 60);
-
-        if (random >= 50)
+        //If we cant find any user data we need to create it
+        if (jsonData == null || jsonData == "")
         {
-            targetType = Type.purple;
-        }
+            Log("No user data found, creating new user data");
 
-        else if (random >= 40)
-        {
-            targetType = Type.blue;
+            user = new UserInfo();
+            user.activeGame = "";
+            StartCoroutine(fbManager.SaveData("users/" + userID, JsonUtility.ToJson(user)));
         }
-
-        else if (random >= 30)
-        {
-            targetType = Type.pink;
-        }
-
-        else if (random >= 20)
-        {
-            targetType = Type.green;
-        }
-
-        else if (random >= 10)
-        {
-            targetType = Type.yellow;
-        }
-
         else
         {
-            targetType = Type.red;
+            //We found user data
+            user = JsonUtility.FromJson<UserInfo>(jsonData);
         }
 
-        Debug.Log(targetType);
-
-        for (int i = currentPlayer.CurrentTile + 1; i < nodes.Count; i++)
-        {           
-            path.Add(nodes[i]);
-
-            if (nodes[i].Type == targetType)
-            {
-                break;
-            }
-
-            if (nodes[i].Type == Type.finish)
-            {
-                break;
-            }
-        }
-
-        diceButton.interactable = false;
-        currentPlayer.MoveToTile(path);
+        //We now have a user, lets check if our user have an active game.
+        CheckedActiveGame();
     }
 
-    public void ChangeCurrentPlayer()
+    private void CheckedActiveGame()
     {
-        playerIndex++;
-
-        if (playerIndex >= players.Count)
+        //Does our user doesn't have an active game?
+        if (user.activeGame == "" || user.activeGame == null)
         {
-            playerIndex = 0;
+            //Start the new game process
+            Log("No active game for the user, look for a game");
+            StartCoroutine(fbManager.CheckForGame("games/", NewGameLoaded));
         }
+        else
+        {
+            //We already have a game, load it
+            Log("Loading Game: " + user.activeGame);
+            StartCoroutine(fbManager.LoadData("games/" + user.activeGame, GameLoaded));
+        }
+    }
 
-        currentPlayer = players[playerIndex];
+    private void NewGameLoaded(string jsonData)
+    {
+        //We couldn't find a new game to join
+        if (jsonData == "" || jsonData == null || jsonData == "{}")
+        {
+            //Create a unique ID for the new game
+            string key = FirebaseDatabase.DefaultInstance.RootReference.Child("games/").Push().Key;
+            string path = "games/" + key;
 
-        diceButton.interactable = true;
+            //Create game structure
+            var newGame = new GameInfo();
+            newGame.player1 = userID;
+            newGame.status = "new";
+            newGame.gameID = key;
+
+            //Save our new game
+            StartCoroutine(fbManager.SaveData(path, JsonUtility.ToJson(newGame)));
+
+            Log("Creating new game: " + key);
+
+            //add the key to our active games
+            user.activeGame = key;
+            StartCoroutine(fbManager.SaveData("users/" + userID, JsonUtility.ToJson(user)));
+
+            GameLoaded(newGame);
+        }
+        else
+        {
+            //We found a game, lets join it
+            var game = JsonUtility.FromJson<GameInfo>(jsonData);
+
+            //Update the game
+            game.player2 = userID;
+            game.status = "full";
+            StartCoroutine(fbManager.SaveData("games/" + game.gameID, JsonUtility.ToJson(game)));
+
+            //Update the user
+            user.activeGame = game.gameID;
+            StartCoroutine(fbManager.SaveData("users/" + userID, JsonUtility.ToJson(user)));
+
+            GameLoaded(game);
+        }
+    }
+
+    private void GameLoaded(string jsonData)
+    {
+        Debug.Log(jsonData);
+
+        if (jsonData == null || jsonData == "")
+        {
+            Log("no game data");
+            Debug.LogError("Error while loading game data");
+        }
+        else
+        {
+            GameLoaded(JsonUtility.FromJson<GameInfo>(jsonData));
+        }
+    }
+
+    private void GameLoaded(GameInfo game)
+    {
+        Log("Game has been loaded");
+        GetComponent<Game>().StartGame(game, userID);
     }
 }
